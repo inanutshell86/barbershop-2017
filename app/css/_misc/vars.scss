@@ -1,6 +1,9 @@
 @import "_misc/fonts";
 
-$container-width: 1200px;
-$footer-height: 200px;
-$body-font: 'PTSansNarrowRegular', 'Helvetica', serif;
-$white: #fff;
+$container-width: 320px;
+$footer-height: 460px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$body-font: 'PTSansNarrowRegular', 'Arial', sans-serif;
+$bg-darkgrey: #292929;
+$bg-lightgrey: #f8f5f2;
