@@ -1,16 +1,14 @@
-var gulp          = require('gulp');
-var browserSync   = require('browser-sync').create();
-var sass          = require('gulp-sass');
-var autoprefixer  = require('gulp-autoprefixer');
-var sourcemaps    = require('gulp-sourcemaps');
-var plumber       = require('gulp-plumber');
-var notify        = require("gulp-notify");
+var gulp          = require('gulp'); var browserSync   =
+require('browser-sync').create(); var sass          = require('gulp-sass'); var
+autoprefixer  = require('gulp-autoprefixer'); var sourcemaps    =
+require('gulp-sourcemaps'); var plumber       = require('gulp-plumber'); var
+notify        = require("gulp-notify");
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init(null, {
-      proxy: "sass"
+      proxy: "barbershop"
     });
 
     gulp.watch("app/css/**/*.scss", ['sass']);
