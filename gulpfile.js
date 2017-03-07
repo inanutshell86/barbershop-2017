@@ -8,7 +8,7 @@ notify        = require("gulp-notify");
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init(null, {
-      proxy: "barbershop"
+      proxy: "barbershop-2017"
     });
 
     gulp.watch("app/css/**/*.scss", ['sass']);
