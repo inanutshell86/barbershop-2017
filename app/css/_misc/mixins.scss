@@ -1,3 +1,5 @@
+@import "_misc/vars";
+
 %clearfix {
   &:before,
   &:after {
@@ -9,44 +11,26 @@
   }
 }
 
-@mixin inline-block($valign: top) {
-  display: inline-block;
-  vertical-align: $valign;
-}
-
-@mixin openSans($style: semibold) {
-  @if $style == semibold {
-    font-family: 'open_sanssemibold';
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
   }
 }
 
-@function rem($px) {
-	@return $px / 16px + 0rem;
-}
-
-
 @mixin desktop {
-	@media screen and (max-width: 1200px) {
-		@content;
-	}
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
 }
 
-@mixin laptop {
-	@media screen and (max-width: 992px) {
-		@content;
-	}
-}
-
-
-@mixin tablets {
-	@media screen and (max-width: 768px) {
-		@content;
-	}
-}
-
-
-@mixin phones {
-	@media screen and (max-width: 480px) {
-		@content;
-	}
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
 }
