@@ -7,11 +7,11 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: $body-font;
-    line-height: 1.42;
+    line-height: 27px;
     -webkit-font-smoothing: antialiased;
-    background: $white;
+    background: $bg-darkgrey;
 }
 
 .wrapper {
@@ -60,4 +60,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	  text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
