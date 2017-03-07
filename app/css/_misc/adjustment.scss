@@ -7,11 +7,11 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: $body-font;
-    line-height: 1.42;
+    line-height: 27px;
     -webkit-font-smoothing: antialiased;
-    background: $white;
+    background: $bg-darkgrey;
 }
 
 .wrapper {
@@ -25,11 +25,27 @@ body {
     content: "";
     display: block;
     height: $footer-height;
+
+    @include tablet {
+      height: 350px;
+    }
+
+    @include desktop {
+      height: 200px;
+    }
 }
 
 .container {
     width: $container-width;
     margin: 0 auto;
+
+    @include tablet {
+      width: 640px;
+    }
+
+    @include desktop {
+      width: 960px;
+    }
 }
 
 .page-footer {
@@ -38,6 +54,16 @@ body {
     margin-top: -$footer-height;
     position: relative;
     min-width: $container-width + 20px;
+
+    @include tablet {
+      height: 350px;
+      margin-top: -350px;
+    }
+
+    @include desktop {
+      height: 200px;
+      margin-top: -200px;
+    }
 }
 
 *, *:before, *:after {
