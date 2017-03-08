@@ -1,0 +1,34 @@
+.page-header {
+  @include tablet {
+    position: relative;
+    padding-bottom: 400px;
+  }
+
+  @include desktop {
+    padding-bottom: 648px;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+  height: 85px;
+  background: $bg-grey;
+
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+  }
+
+  @include desktop {
+    height: 648px;
+  }
+}
+
+.page-header__logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
