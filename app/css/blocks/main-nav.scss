@@ -1,0 +1,31 @@
+.main-nav {
+  @include tablet {
+    width: auto;
+  }
+}
+
+.main-nav__wrapper {
+  @include clearfix;
+}
+
+.main-nav__list {
+  @include tablet {
+    float: left;
+    width: 570px;
+  }
+  @include desktop {
+    float: left;
+    width: 780px;
+  }
+}
+
+.main-nav__user-list {
+  @include tablet {
+    float: right;
+    width: 60px;
+  }
+  @include desktop {
+    float: right;
+    width: 160px;
+  }
+}
