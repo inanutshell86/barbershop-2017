@@ -1,0 +1,71 @@
+.stats {
+  @include tablet {
+    position: relative;
+    z-index: 1;
+    margin-top: -184px;
+  }
+
+  @include desktop {
+    position: relative;
+    z-index: 1;
+    margin-top: -159px;
+  }
+}
+
+.container {
+  @include desktop {
+    @include clearfix($extend: false);
+    }
+}
+
+.stats__header {
+  padding: 27px 38px;
+
+  @include tablet {
+    @include clearfix($extend: false);
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 24px;
+  }
+
+  @include desktop {
+    @include clearfix($extend: false);
+    float: left;
+    width: 240px;
+    padding: 0 40px;
+  }
+}
+
+.stats__legend--top {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.stats__legend--bottom {
+  @include desktop {
+    display: none;
+  }
+}
+
+.stats__table {
+  width: 100%;
+
+  @include tablet {
+    @include clearfix($extend: false);
+    display: block;
+  }
+
+  @include desktop {
+    @include clearfix($extend: false);
+    display: block;
+    float: left;
+    width: 640px;
+  }
+}
