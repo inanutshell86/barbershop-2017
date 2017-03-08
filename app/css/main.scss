@@ -5,5 +5,9 @@
 @import "_misc/adjustment";
 
 /*styles*/
-@import "sections/header";
-@import "sections/footer";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/stats";
+@import "blocks/advantages";
+@import "blocks/news";
+@import "blocks/page-footer";
