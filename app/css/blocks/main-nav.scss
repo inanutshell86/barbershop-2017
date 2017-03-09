@@ -1,31 +1,220 @@
 .main-nav {
-  @include tablet {
-    width: auto;
+  position: relative;
+
+  &__toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 50px;
+    padding: 0;
+    font-size: 0;
+    background-color: $bg-toggle-nav;
+    border: 0;
+    cursor: pointer;
+
+    &--closed::before {
+      position: absolute;
+      top: 15px;
+      right: 17px;
+      bottom: 15px;
+      left: 17px;
+      content: '';
+      background: linear-gradient($color-white 10%, transparent 10%, transparent 45%, $color-white 45%, $color-white 55%, transparent 55%, transparent 90%, $color-white 90%);
+    }
+
+    &--opened {
+      left: 0;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 17px;
+        top: 24px;
+        width: 36px;
+        height: 2px;
+        content: '';
+        background-color: $color-white;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--opened:active::before,
+    &--opened:active::after {
+      background-color: $color-menu-btn-down;
+    }
+
+    &--closed:active::before {
+      background: linear-gradient($color-menu-btn-down 10%, transparent 10%, transparent 45%, $color-menu-btn-down 45%, $color-menu-btn-down 55%, transparent 55%, transparent 90%, $color-menu-btn-down 90%);
+    }
   }
+
+  &__item a {
+    display: block;
+    padding: 15px 21px 17px;
+    color: $color-white;
+    font-family: 'PTSansNarrowBold';
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: $bg-nav-menu-item;
+  }
+
+  &__item {
+    &--active a {
+      padding-top: 12px;
+      padding-bottom: 14px;
+    }
+  }
+
+  &__user-login {
+    position: relative;
+    display: block;
+    padding: 15px 50px 17px;
+    color: $color-white;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: $bg-toggle-nav;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 18px;
+      left: 20px;
+      background: url('../img/icons/login.png') 0 0;
+    }
+  }
+
+  // @include tablet {
+  //   width: auto;
+  // }
 }
 
-.main-nav__wrapper {
-  @include clearfix;
-}
+@media #{$break-small} {
 
-.main-nav__list {
-  @include tablet {
-    float: left;
-    width: 570px;
-  }
-  @include desktop {
-    float: left;
-    width: 780px;
-  }
-}
+  .main-nav {
 
-.main-nav__user-list {
-  @include tablet {
-    float: right;
-    width: 60px;
+    &__wrapper--closed &__item,
+    &__wrapper--closed &__user-login {
+      display: none;
+    }
+
+    &__wrapper--closed &__item--active {
+      display: block;
+    }
+
+    &__wrapper--closed &__item a {
+      border: none;
+      padding: 13px 0;
+      text-align: center;
+    }
+
+    &__wrapper--opened {
+      background-color: $bg-color-menu-login;
+      height: 100vh;
+      left: 70px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 15;
+
+      &::after {
+        box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.5);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        width: 7px;
+      }
+
+    }
+
   }
-  @include desktop {
-    float: right;
-    width: 160px;
-  }
+
 }
+//
+// .main-nav__item--active a {
+//   padding: 0;
+//   padding: 12px 70px 14px 130px;
+// }
+
+// .main-nav__wrapper {
+//   @include clearfix;
+// }
+//
+// .main-nav__list {
+//
+//   @include tablet {
+//     float: left;
+//     width: 570px;
+//   }
+//   @include desktop {
+//     float: left;
+//     width: 780px;
+//   }
+// }
+
+// .main-nav__item:nth-child(n+2) {
+//   display: none;
+// }
+
+// .main-nav__item a {
+//   display: block;
+//   padding: 15px 21px 17px;
+//   color: $white;
+//   font-family: 'PTSansNarrowBold';
+//   font-size: 18px;
+//   line-height: 24px;
+//   text-transform: uppercase;
+// }
+
+// .main-nav__item--active a {
+//   padding: 0;
+//   padding: 12px 70px 14px 130px;
+// }
+
+// .main-nav__user-list {
+//   @include tablet {
+//     float: right;
+//     width: 60px;
+//   }
+//   @include desktop {
+//     float: right;
+//     width: 160px;
+//   }
+// }
+
+// .main-nav__user-item {
+//   display: none;
+// }
+
+// .main-nav__user-login {
+//   position: relative;
+//   display: block;
+//   padding: 15px 50px 17px;
+//   color: $color-white;
+//   font-size: 18px;
+//   line-height: 24px;
+//   background-color: $bg-toggle-nav;
+// }
+
+// .main-nav__user-login::before {
+//   content: "";
+//   position: absolute;
+//   width: 16px;
+//   height: 16px;
+//   top: 18px;
+//   left: 20px;
+//   background: url('../img/icons/login.png') 0 0;
+// }

@@ -93,3 +93,7 @@ a {
 .visually-hidden {
   display: none;
 }
+
+button:focus {
+	outline: none;
+}
