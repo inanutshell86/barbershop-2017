@@ -97,3 +97,8 @@ a {
 button:focus {
 	outline: none;
 }
+
+input[type=checkbox], input[type=radio] {
+    display: none;
+    margin: 20px;
+}
