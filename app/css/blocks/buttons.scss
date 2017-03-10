@@ -1,0 +1,47 @@
+.btn {
+  background-color: $bg-color-button;
+  border: 1px solid $color-border-modal;
+  color: $color-black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-base;
+  font-family: 'PTSansNarrowBold';
+  line-height: $line-height-small;
+  padding: 12px 90px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: top;
+
+  &:hover {
+    border-color: $color-button-border-hover;
+  }
+
+  &:active {
+    background-color: $color-button-bg-active;
+    color: $color-button-text-active;
+  }
+
+  &--log-in {
+    float: left;
+    background-color: $bg-color-menu-active;
+    color: $color-white;
+    padding: 12px 0;
+    width: 130px;
+
+    &:hover {
+      background-color: $color-news-text-active;
+    }
+
+    &:active {
+      color: $color-menu-mobile-hover;
+    }
+
+  }
+
+  &--close {
+    float: right;
+    padding: 12px 0;
+    width: 130px;
+  }
+
+}
