@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* Mobile layout by default */
-        background-image: url( "img/320.jpg" );
+        background-image: url( "img/320-mf.jpg" );
       }
       /* Tablet */
       @media ( min-width: 760px ) {
@@ -198,6 +198,33 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="modal-personal">
+        <header class="modal-personal__header">
+          <b class="modal-personal__title">Личный кабинет</b>
+          <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
+        </header>
+
+        <form class="modal-personal__form" action="#" method="post">
+          <div class="modal-personal__user">
+            <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
+            <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
+            <input class="modal-personal__field modal-personal__field--password" type="password" id="password" placeholder="Пароль">
+            <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
+          </div>
+
+          <div class="modal-personal__settings">
+            <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
+            <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
+            <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
+          </div>
+
+          <div class="modal-personal__btns">
+            <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
+            <button class="btn btn--close" type="button">Закрыть</button>
+          </div>
+        </form>
       </section>
 
     </div>
