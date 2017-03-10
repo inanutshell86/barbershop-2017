@@ -58,13 +58,15 @@
 
   &__item a {
     display: block;
-    padding: 15px 21px 17px;
+    padding: 13px 21px;
     color: $color-white;
     font-family: 'PTSansNarrowBold';
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
     background-color: $bg-nav-menu-item;
+    box-shadow: 0 1px #71543f, inset 0 1px #886e5b;
+    border-bottom: 1px solid $color-border;
   }
 
   &__item {
@@ -90,7 +92,7 @@
       height: 16px;
       top: 18px;
       left: 20px;
-      background: url('../img/icons/login.png') 0 0;
+      background: url('../img/icons/sprite.png') -10px -204px;
     }
   }
 
@@ -113,9 +115,10 @@
     }
 
     &__wrapper--closed &__item a {
-      border: none;
       padding: 13px 0;
       text-align: center;
+      box-shadow: none;
+      border: none;
     }
 
     &__wrapper--opened {
