@@ -3,6 +3,7 @@
 @import "_misc/mixins";
 @import "_misc/normalize";
 @import "_misc/adjustment";
+@import "blocks/buttons";
 
 /*styles*/
 @import "blocks/page-header";
@@ -10,4 +11,5 @@
 @import "blocks/stats";
 @import "blocks/advantages";
 @import "blocks/news";
+@import "blocks/modal-personal";
 @import "blocks/page-footer";
