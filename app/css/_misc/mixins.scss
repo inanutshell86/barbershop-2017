@@ -39,3 +39,10 @@
     @content;
   }
 }
+
+@mixin title {
+  font-size: $font-size-big;
+  line-height: $line-height-medium;
+  text-align: center;
+  text-transform: uppercase;
+}
